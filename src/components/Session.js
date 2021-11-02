@@ -13,7 +13,7 @@ setActive(x)
 setExercises(routine[x])
 }
 const moveUp= (y) => {
-    let replica = [... exercises]
+    let replica = [...exercises]
   if (y!==0) {  replica.splice(y-1,0,replica[y])
     replica.splice(y+1,1)
 
@@ -34,7 +34,7 @@ alert("only up from here")
 }
 }
 const remove= (a) => {
-    let replica = [... exercises]
+    let replica = [...exercises]
  replica.splice(a,1)
 
 setExercises(replica)
