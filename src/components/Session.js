@@ -24,7 +24,7 @@ alert("already on top!")
 }
 }
 const moveDown= (z) => {
-    let replica = [... exercises]
+    let replica = [...exercises]
   if (z+1!==replica.length) {  replica.splice(z+2,0,replica[z])
     replica.splice(z,1)
 
