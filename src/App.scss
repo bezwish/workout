@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Turret+Road&display=swap');
+
+/////////////////*Utilities */////////////
+$border-color:gray;
+$main-color:#2C3e50;
+$secondary-color:#18bc9c;
+$main-text:#DDD;
+$btn:#b64218;
+:root {
+    text-align:left;
+    font-weight:600;
+    padding:0;
+    margin:0;
+}
+* {
+    box-sizing:border-box
+}
+body {
+    font-family:"Turret Road";
+    color:$main-text;
+    background:grey;
+    line-height:1.6
+}
+input {
+    font-family:"lato";
+}
+input[type=submit] {
+    font-family:"lato"
+}
+h1, h2 { 
+font-weight:300;
+line-height:1.2;
+margin: 10px 0;
+}
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-size:12*$i;
+        color:$main-text;
+    }
+}
+img {
+    width:100%;
+}
+
+input[input] {
+    border:none;
+    border-radius:2px;
+    background:$main-text;
+}
+input::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+
+ul {
+    list-style-type:none;
+}
+
+option {display:none;}
+
+input::placeholder{
+    color:#555;
+    font-size:1em;
+    font-weight:600;
+}
+input, input:hover, button{
+margin:10px auto;
+background:none;
+outline:none;
+box-shadow:none;
+border:none;
+
+}
+
+input[type=text], input[type=number], input[type=submit] {
+    padding:10px 20px 5px 20px;
+}
+
+input[type=text], input[type=number] {
+    font-family:"Lato"
+}
+input[type=text]:active, input[type=number]:active {
+    font-family:"Lato"
+}
+
+
+input[type=submit] {
+    background:linear-gradient(to right,none,$main-color,none);
+border:none;
+}
+
+input[type=radio], input[type=checkbox]{ 
+    display:none;
+}
+
+p, label, input{
+    color:$main-text;
+}
+
+#root {display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.container{
+
+    max-width:1200px;
+max-height:600px;
+overflow:overlay;
+}
+
+.grid {
+    display:grid;
+}
+
+.flex {
+    display:flex;
+flex-wrap:wrap;
+}
+
+.app {
+    width:50vw;
+    height:100vh;
+    background:$main-color;
+}
+
+//////////////////////////////////////////////////////GENERAL ///////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.multi-choice{
+    display:inline-block;
+    margin: 10px;
+    padding:5px;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    border-radius: 2px;
+background:$main-color;
+
+}
+input[type=radio]:checked+.multi-choice,input[type=checkbox]:checked+.multi-choice {
+    background:#2b5177;
+}
+
+ .btn {
+font-family:"Lato";
+    background:$btn;
+    transform:skewX(-30deg);
+display:inline-block;
+box-shadow:none;
+border-bottom:2px solid $main-text;
+
+ * {
+     transform:skewX(30deg);
+ }
+}
+.btn:hover { 
+    display:inline-block;
+     transform:scale(0.8);
+    transform:skewX(-30deg);
+    background:rgb(158, 54, 16);
+    box-shadow:none;
+}
+.btn-2 {
+    font-family:"lato";
+    background:$secondary-color;
+display:inline;
+border:none;
+
+}
+.btn-2:hover { 
+    display:inline-block;
+    background:#0adfb4;
+}
+
+//////////////////////////////////////////////////////MENU ////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.header {
+    text-align:center;
+    display:grid;
+    grid-template-columns:4fr 1fr;
+    padding:none;
+.btn-2 {
+    align-self:flex-end;
+margin:none;}
+}
+
+.menu {
+    padding:20px;
+width:100%;
+ 
+}
+.menu-item {
+width:95%;
+    margin:5px 10px;
+    padding:10px;
+    background:$secondary-color;
+    border:none;
+    box-shadow: 3px 4px 0px 0px #333;
+}
+
+
+////////////////////////////////////////////////////SESSION ///////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.form {
+padding:0 10px 10px 10px;
+background:$secondary-color;
+
+    input[type=submit] {
+        text-align:center;
+
+    }
+}
+.num {
+    width:25%;
+}
+.advanced-form {
+    background:#0adfb4;
+    text-align:center;
+}
+.nav {
+    overflow:none;
+.flex {
+    justify-content:flex-start;
+}
+
+}
+.nav-item {
+outline:none;
+transform:skew(-45deg);
+background:rgb(182, 66, 24);
+margin:-25px 2px;
+padding:0 20px ;
+
+cursor:pointer;
+ p {
+transform:skewX(45deg);
+}
+}
+
+.nav-item:hover,.nav-item:active {
+    transform:scale(0.8);
+    transform:skewX(-45deg);
+    background:rgb(158, 54, 16);
+}
+
+.active {
+background:rgb(158, 54, 16);
+border-bottom:2px solid white;
+}
+.active:hover {
+   background:rgb(158, 54, 16);
+}
+
+.exercises {
+    text-align:left;
+}
+.back {
+    width:95%;
+    grid-template-columns: 3fr 1fr;
+    justify-content:center;
+    align-items:center;
+
+
+  
+}
+.right {
+    grid-column-start:2;
+}

@@ -1,38 +1,348 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Turret+Road&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Turret+Road&display=swap");
+:root {
+  text-align: left;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Turret Road";
+  color: #DDD;
+  background: grey;
+  line-height: 1.6;
+}
+
+input {
+  font-family: "lato";
+}
+
+input[type=submit] {
+  font-family: "lato";
+}
+
+h1, h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 12;
+  color: #DDD;
+}
+
+h2 {
+  font-size: 24;
+  color: #DDD;
+}
+
+h3 {
+  font-size: 36;
+  color: #DDD;
+}
+
+h4 {
+  font-size: 48;
+  color: #DDD;
+}
+
+h5 {
+  font-size: 60;
+  color: #DDD;
+}
+
+h6 {
+  font-size: 72;
+  color: #DDD;
+}
+
+img {
+  width: 100%;
+}
+
+input[input] {
+  border: none;
+  border-radius: 2px;
+  background: #DDD;
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+option {
+  display: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #555;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+input:-ms-input-placeholder {
+  color: #555;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+input::-ms-input-placeholder {
+  color: #555;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+input::placeholder {
+  color: #555;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+input, input:hover, button {
+  margin: 10px auto;
+  background: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+input[type=text], input[type=number], input[type=submit] {
+  padding: 10px 20px 5px 20px;
+}
+
+input[type=text], input[type=number] {
+  font-family: "Lato";
+}
+
+input[type=text]:active, input[type=number]:active {
+  font-family: "Lato";
+}
+
+input[type=submit] {
+  background: -webkit-gradient(linear, left top, right top, from(none), color-stop(#2C3e50), to(none));
+  background: linear-gradient(to right, none, #2C3e50, none);
+  border: none;
+}
+
+input[type=radio], input[type=checkbox] {
+  display: none;
+}
+
+p, label, input {
+  color: #DDD;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  max-height: 600px;
+  overflow: overlay;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.app {
+  width: 50vw;
+  height: 100vh;
+  background: #2C3e50;
+}
+
+.multi-choice {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  border-radius: 2px;
+  background: #2C3e50;
+}
+
+input[type=radio]:checked + .multi-choice, input[type=checkbox]:checked + .multi-choice {
+  background: #2b5177;
+}
+
+.btn {
+  font-family: "Lato";
+  background: #b64218;
+  -webkit-transform: skewX(-30deg);
+          transform: skewX(-30deg);
+  display: inline-block;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: 2px solid #DDD;
+}
+
+.btn * {
+  -webkit-transform: skewX(30deg);
+          transform: skewX(30deg);
+}
+
+.btn:hover {
+  display: inline-block;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transform: skewX(-30deg);
+          transform: skewX(-30deg);
+  background: #9e3610;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-2 {
+  font-family: "lato";
+  background: #18bc9c;
+  display: inline;
+  border: none;
+}
+
+.btn-2:hover {
+  display: inline-block;
+  background: #0adfb4;
+}
+
+.header {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
+  padding: none;
+}
+
+.header .btn-2 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: none;
+}
+
+.menu {
+  padding: 20px;
+  width: 100%;
+}
+
+.menu-item {
+  width: 95%;
+  margin: 5px 10px;
+  padding: 10px;
+  background: #18bc9c;
+  border: none;
+  -webkit-box-shadow: 3px 4px 0px 0px #333;
+          box-shadow: 3px 4px 0px 0px #333;
+}
+
+.form {
+  padding: 0 10px 10px 10px;
+  background: #18bc9c;
+}
+
+.form input[type=submit] {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.num {
+  width: 25%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.advanced-form {
+  background: #0adfb4;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav {
+  overflow: none;
 }
 
-.App-link {
-  color: #61dafb;
+.nav .flex {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-item {
+  outline: none;
+  -webkit-transform: skew(-45deg);
+          transform: skew(-45deg);
+  background: #b64218;
+  margin: -25px 2px;
+  padding: 0 20px;
+  cursor: pointer;
 }
+
+.nav-item p {
+  -webkit-transform: skewX(45deg);
+          transform: skewX(45deg);
+}
+
+.nav-item:hover, .nav-item:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
+  background: #9e3610;
+}
+
+.active {
+  background: #9e3610;
+  border-bottom: 2px solid white;
+}
+
+.active:hover {
+  background: #9e3610;
+}
+
+.exercises {
+  text-align: left;
+}
+
+.back {
+  width: 95%;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+/*# sourceMappingURL=App.css.map */
