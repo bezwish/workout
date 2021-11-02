@@ -27,6 +27,8 @@ setRoutine(newRoutine)
 }
 /////////////////////////////// RENDER ///////////////////////////////////////////////////////////////////////////////////////
   return (<div className="form">
+    <br/>
+
     <form onSubmit={handleSubmit}>
 <div className="form-control">
 <label htmlFor="">Exercise</label>

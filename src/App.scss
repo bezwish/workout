@@ -20,7 +20,8 @@ body {
     font-family:"Turret Road";
     color:$main-text;
     background:grey;
-    line-height:1.6
+    line-height:1.6;
+overflow:none!important;
 }
 input {
     font-family:"lato";
@@ -106,7 +107,6 @@ align-items:center;
 .container{
 
     max-width:1200px;
-max-height:600px;
 overflow:overlay;
 }
 
@@ -262,7 +262,7 @@ border-bottom:2px solid white;
     text-align:left;
 }
 .back {
-    width:95%;
+    width:92%;
     grid-template-columns: 3fr 1fr;
     justify-content:center;
     align-items:center;

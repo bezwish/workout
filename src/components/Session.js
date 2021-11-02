@@ -25,7 +25,7 @@ alert("already on top!")
 }
 const moveDown= (z) => {
     let replica = [... exercises]
-  if (z+1!==replica.length) {  replica.splice(z+1,0,replica[z])
+  if (z+1!==replica.length) {  replica.splice(z+2,0,replica[z])
     replica.splice(z,1)
 
 setExercises(replica)}
@@ -54,7 +54,7 @@ return (
 
 
 <div className="back grid">
-{exercises.length===0?<p>Add some exercises!</p>:
+{exercises.length===0?<div><p>Add some exercises!</p></div>:
 <ul style={{display:"block"}} className="exercises">
 {exercises.map((exercise,index)=><Exercise key={index} 
 upBtn={<button className="btn-2" onClick={()=>moveUp(index)}><span><FaSortUp style={{color:"white"}}/></span></button>}
