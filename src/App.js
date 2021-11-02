@@ -6,7 +6,7 @@ import {useState} from "react"
 
 
 function App() {
-const [exercises,setExercises] = useState([{name:"Push ups",reps:"12",sets:"10"}])
+const [exercises,setExercises] = useState([])
 const [step,setStep] = useState("")
 const [split,setSplit] = useState([])
   return (
